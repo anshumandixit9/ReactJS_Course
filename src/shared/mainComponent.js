@@ -3,6 +3,7 @@ import Menu from './Menu.js'
 import { Dishes } from '../Dishes.js';
 import DishDetail from "./DishDetail.js";
 import Header from './header.js';
+import Footer from './footer.js';
 
 class Main extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Main extends Component {
           />
           <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />
         </div>
+        <Footer/>
       </>
     );
   }
