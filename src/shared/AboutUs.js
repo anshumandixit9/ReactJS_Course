@@ -3,23 +3,26 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'r
 import { Link } from 'react-router-dom';
 function RenderLeader({leader}){
     return(
-        <Media>
-            <Media left middle>
+        <div className="container" className = "col-12 mt-5 ">
+        <Media >
+            <Media left >
                 <Media object src={leader.image}/>
             </Media>
-            <Media body className="col-12">
+            <Media body className="col-12 ml-4" >
                 <Media heading>{leader.name}</Media>
-                <p>{leader.designation}</p>
-                <p>{leader.description}</p>
+                <div>{leader.designation}</div>
+                <br/>
+                <div>{leader.description}</div>
             </Media>
         </Media>
+        </div>
     );
 }
 function About(props) {
 
     const leaders = props.leaders.map((leader) => {
         return (
-            <RenderLeader leader = {leader}/>
+                <RenderLeader leader = {leader}/>
         );
     });
 
